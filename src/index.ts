@@ -1,3 +1,5 @@
+import "./index.css";
+
 import { registerSW } from "virtual:pwa-register";
 
 // Register service worker for offline support
