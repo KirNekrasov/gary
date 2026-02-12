@@ -5,7 +5,7 @@ registerSW({ immediate: true });
 
 const btn = document.getElementById("btn") as HTMLButtonElement;
 const gary = document.getElementById("gary") as HTMLImageElement;
-const audio = new Audio("/gary.mp3");
+const audio = new Audio("gary.mp3");
 
 // Handle button press
 btn.addEventListener("pointerdown", () => {
