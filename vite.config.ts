@@ -1,9 +1,11 @@
 import { defineConfig } from "vite";
+import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
   base: "/gary/",
   plugins: [
+    cssInjectedByJsPlugin(),
     VitePWA({
       registerType: "autoUpdate",
       includeAssets: [
@@ -24,6 +26,22 @@ export default defineConfig({
             src: "icon-192.png",
             sizes: "192x192",
             type: "image/png",
+          },
+        ],
+      },
+      workbox: {
+        inlineWorkboxRuntime: true,
+        runtimeCaching: [
+          {
+            urlPattern: /\.(?:png|jpg|jpeg|svg|gif|avif|webp|mp3)$/,
+            handler: "CacheFirst",
+            options: {
+              cacheName: "assets",
+              expiration: {
+                maxEntries: 10,
+                maxAgeSeconds: 60 * 60 * 24 * 30, // 30 Days
+              },
+            },
           },
         ],
       },

@@ -2,10 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="A simple interactive button brought to you by Gary the kitten." />
     <title>Gary's Button</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta
@@ -13,6 +11,7 @@
       content="black-translucent"
     />
     <link rel="stylesheet" href="/src/index.css" />
+    <link rel="preconnect" />
   </head>
   <body>
     <div class="text">gary has brought you the button</div>
@@ -30,9 +29,11 @@
           id="gary" 
           src="/gary.jpg" 
           alt="Gary" 
-          width="876" 
-          height="642"
+          width="247" 
+          height="181"
           class="gary-img"
+          fetchpriority="high"
+          decoding="async"
         />
       </picture>
     </div>
