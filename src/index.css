@@ -1,0 +1,87 @@
+body {
+  --padding: 20px;
+
+  margin: 0;
+  height: 100dvh;
+  background-color: white;
+  font-family: "Segoe UI", -apple-system, system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  overflow: hidden;
+  padding: var(--padding);
+  padding-top: calc(env(safe-area-inset-top) + var(--padding));
+  padding-bottom: calc(env(safe-area-inset-bottom) + var(--padding));
+  padding-left: calc(env(safe-area-inset-left) + var(--padding));
+  padding-right: calc(env(safe-area-inset-right) + var(--padding));
+  box-sizing: border-box;
+  overscroll-behavior: none;
+  position: fixed;
+  width: 100%;
+}
+
+.btn {
+  --size: 30vh;
+
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  border: none;
+  background-color: #ff69b4;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 900;
+  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.5);
+  white-space: pre-line;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.05s;
+}
+
+.btn:active {
+  transform: scale(0.92);
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(2px, 2px) rotate(2deg);
+  }
+  50% {
+    transform: translate(-2px, 0px) rotate(-2deg);
+  }
+  75% {
+    transform: translate(2px, -2px) rotate(1deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+.shaking {
+  animation: shake 0.1s infinite;
+}
+
+.text {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.gary-container {
+  position: fixed;
+  right: -20px;
+  top: 30%;
+  transform: translateY(-50%);
+  width: 60vw;
+  z-index: -1;
+}
+
+.gary-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

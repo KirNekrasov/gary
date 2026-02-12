@@ -1,0 +1,8 @@
+{
+  "editor.defaultFormatter": "biomejs.biome",
+  "files.insertFinalNewline": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.quickSuggestions": {
+    "strings": "on"
+  }
+}
