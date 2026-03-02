@@ -66,6 +66,52 @@ body {
   animation: shake 0.1s infinite;
 }
 
+@keyframes sway {
+  0% {
+    rotate: -8deg;
+  }
+  40% {
+    rotate: -8deg;
+  }
+  50% {
+    rotate: 8deg;
+  }
+  90% {
+    rotate: 8deg;
+  }
+  100% {
+    rotate: -8deg;
+  }
+}
+
+@keyframes party-jitter {
+  0% {
+    translate: 0 0;
+  }
+  20% {
+    translate: 2px -2px;
+  }
+  40% {
+    translate: -2px 2px;
+  }
+  60% {
+    translate: 2px 2px;
+  }
+  80% {
+    translate: -2px -2px;
+  }
+  100% {
+    translate: 0 0;
+  }
+}
+
+.party-sway {
+  transform-origin: 50% 85%;
+  animation:
+    sway var(--party-bar-duration, 1.5s) ease-in-out infinite,
+    party-jitter 0.22s linear infinite;
+}
+
 .text {
   font-size: 1.4rem;
   font-weight: 400;

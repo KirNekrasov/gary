@@ -12,7 +12,8 @@ export default defineConfig({
         "gary.avif",
         "gary.webp",
         "gary.jpg",
-        "sound.mp3",
+        "gary.mp3",
+        "song.mp3",
         "icon-192.png",
       ],
       manifest: {
