@@ -9,6 +9,12 @@ const btn = document.getElementById("btn") as HTMLButtonElement;
 const gary = document.getElementById("gary") as HTMLImageElement;
 const tapAudio = new Audio("gary.mp3");
 const partyAudio = new Audio("song.mp3");
+const allSounds = [tapAudio, partyAudio];
+
+for (const sound of allSounds) {
+  sound.preload = "auto";
+  sound.load();
+}
 
 const PARTY_TAP_COUNT = 5;
 const PARTY_WINDOW_MS = 2000;
